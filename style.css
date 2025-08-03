@@ -263,16 +263,35 @@
 .specialties{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width:100%;
+    position: relative;
 }
-
+.specialties h2{
+    font-family:Great Vibes ;
+    font-size: 60px;
+    color: #c8a97e;
+    font-weight: normal;
+    margin-top:20px ;
+    margin-bottom: 50px;
+}
+.specialties .title{
+    position: absolute;
+    width: 140px;
+    font-size: 25px;
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 900;
+    color: #333333;
+    top: 50px;
+    align-items: center;
+}
 .specialties-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows:repeat(4,1fr) ;
     padding: 20px;
-    width: 100%;
+    width: 70%;
     flex-wrap: wrap;
 }
 
@@ -282,7 +301,6 @@
     flex-direction: row;
     text-align: start;
     transition: transform 0.3s ease;
-    width: 50%;
 }
 
 .column-item:hover {
@@ -297,7 +315,6 @@
 
 .column-info {
     padding: 15px;
-    width: 50%;
 }
 
 .column-info p {
@@ -316,6 +333,7 @@
     display: block;
     margin: 10px 0;
     color: #777;
+    width: 20px;
 }
 
 .column-info button {
@@ -331,4 +349,81 @@
 
 .column-info button:hover {
     background-color: #a7792f;
+}
+
+/* Chef */
+
+.chef{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 30px ;
+}
+
+.chef h2{
+    font-family:Great Vibes ;
+    font-size: 60px;
+    color: #c8a97e;
+    font-weight: normal;
+    margin-top:20px ;
+    margin-bottom: 50px;
+}
+
+.chef .title{
+    position: absolute;
+    width: 220px;
+    font-size: 25px;
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 900;
+    color: #333333;
+    top: 50px;
+    align-items: center;
+}
+
+.chef .chef-grid{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.chef-grid .chef-item{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.3s ease;
+}
+
+.chef-grid .chef-item:hover{
+    transform: translateY(-5px);
+}
+
+.chef-item img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.chef-item p{
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.chef-item small{
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.chef-item i{
+    color: #c2923b;
+    transform: color 0.3s ease;
+}
+.chef-item i:hover{
+    color: #a7792f;
 }
