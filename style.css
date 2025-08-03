@@ -427,3 +427,213 @@
 .chef-item i:hover{
     color: #a7792f;
 }
+
+/* Reservation */
+.reservation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./assests/bg_3.jpg') no-repeat center center/cover;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.reservation h2{
+    font-family:Great Vibes ;
+    font-size: 60px;
+    color: #c8a97e;
+    font-weight: normal;
+    margin-top:20px ;
+    margin-bottom: 50px;
+    position:absolute;
+}
+
+.reservation .title{
+    position: absolute;
+    width: 220px;
+    font-size: 25px;
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 900;
+    color: #333333;
+    top: 50px;
+    align-items: center;
+}
+
+.reservation .formulaire-reservation{
+    background: #ffff;
+    display:flex;
+    align-items: start;
+    width: 70%;
+}
+
+.formulaire-reservation .bloc{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Testimony */
+
+.testimony{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.testimony h2{
+    font-family:Great Vibes ;
+    font-size: 60px;
+    color: #c8a97e;
+    font-weight: normal;
+    margin-top:20px ;
+    margin-bottom: 50px;
+}
+
+.testimony .title{
+    position: absolute;
+    width: 220px;
+    font-size: 25px;
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 900;
+    color: #333333;
+    top: 50px;
+    align-items: center;
+}
+
+.testimony .testimony-grid{
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimony-grid .testimony-item{
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimony-item img{
+    border-radius: 50%;
+    width: 30%;
+    object-fit: cover;
+}
+
+.testimony-item .descrip{
+    font-size: 14px;
+    color: #333333;
+    font-family: "Poppins", Arial, sans-serif;
+    display: block;
+    text-align: center;
+    align-items: center;
+    width: 60%;
+}
+
+.testimony-item .name{
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Recent */
+
+.recent{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 5%;
+    background: #f4f4f4;
+    position: relative;
+}
+
+.recent h2{
+    font-family:Great Vibes ;
+    font-size: 60px;
+    color: #c8a97e;
+    font-weight: normal;
+    margin-top:20px ;
+    margin-bottom: 50px;
+}
+
+.recent .title{
+    position: absolute;
+    text-align: center;
+    width: 220px;
+    font-size: 25px;
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 900;
+    color: #333333;
+    top: 50px;
+    align-items: center;
+}
+
+.recent .recent-grid{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+}
+
+.recent-grid .recent-item{
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.recent-grid .recent-item:hover{
+    transform: translateY(-5px);
+}
+
+
+.recent-item img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.recent-item .info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.recent-item .date{
+    color: #777;
+}
+
+.recent-item .name{
+    display: block;
+    width: 200px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.recent-item .read{
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.recent-item .read:hover{
+    color: #0f0f0f4d;
+}
+
+.recent-item  span{
+    float: right;
+    color: #777;
+    padding-right: 30px;
+}
