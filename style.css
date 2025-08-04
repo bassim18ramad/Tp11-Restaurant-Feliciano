@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* header */
+/* Header */
 .header {
     display:flex;
     justify-content: space-between;
@@ -11,6 +11,10 @@
     background: #000;
     color: #fff;
     padding: 20px 50px;
+}
+
+.header i {
+    display: none;
 }
 .logo {
     margin: 10px;
@@ -433,9 +437,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding-left: 10% ;
     background: url('./assests/bg_3.jpg') no-repeat center center/cover;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     position: relative;
     background-attachment: fixed;
@@ -449,30 +454,77 @@
     margin-top:20px ;
     margin-bottom: 50px;
     position:absolute;
+    top: 0px;
+    left: 20%;
 }
 
 .reservation .title{
     position: absolute;
-    width: 220px;
-    font-size: 25px;
+    width: 400px;
+    font-size: 35px;
     font-family: "Poppins", Arial, sans-serif;
     font-weight: 900;
     color: #333333;
     top: 50px;
+    left: 18%;
     align-items: center;
+}
+
+.reservation .reservation-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 50px 20px;
+    margin: 30px 0;
+    height: 550px;
+    width: 50%;
+    gap: 20px;
+}
+
+.reservation-item button{
+    margin: 0 30px;
+    padding: 20px 0;
+    width: 50%;
+    color: #fff;
+    background-color: #c8a97e;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.reservation-item button:hover{
+    background:#c2923b ;
 }
 
 .reservation .formulaire-reservation{
     background: #ffff;
+    margin: 50px;
     display:flex;
     align-items: start;
-    width: 70%;
+    gap: 5%;
+    width: 100%;
 }
 
 .formulaire-reservation .bloc{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    width: 50%;
 }
+.bloc label{
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: "Poppins",Arial, sans-serif;
+}
+
+.bloc input{
+    padding: 10px 5px;
+}
+
+.bloc select{
+    padding: 14px 5px;
+}
+
 
 /* Testimony */
 
@@ -511,18 +563,31 @@
 }
 
 .testimony-grid .testimony-item{
-    gap: 15px;
+    gap: 30px;
     align-items: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .testimony-item img{
     border-radius: 50%;
     width: 30%;
     object-fit: cover;
+}
+
+.testimony-item i{
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #c8a97e;
+    color: #fff;
+    position: absolute;
+    top:98px;
+    left:55% ;
+    font-weight:bolder;
+    font-size: 20px;
 }
 
 .testimony-item .descrip{
@@ -636,4 +701,263 @@
     float: right;
     color: #777;
     padding-right: 30px;
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    height: 90vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer .footer-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.footer-grid .footer-item{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    justify-content: start;
+}
+
+.footer-item h4{
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 18px;
+    display: block;
+}
+.footer-item .image{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    flex-wrap: wrap;
+}
+
+.footer-item img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.footer-item  p{
+    display: block;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.footer-item .day-work p{
+    width: 180px;
+}
+
+.footer-item .descrip{
+    width: 300px;
+}
+
+.footer-item .email{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.email input{
+    padding: 15px 0px;
+    text-align: center;
+    background-color: #333333;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.email button{
+    padding: 15px 0px;
+    background: #c8a97e;
+    color: #fff;
+    font-family: "Poppins", Arial, sans-serif;
+    transition: background 0.3s ease;
+}
+
+.email button:hover{
+    background: #c2923b;
+}
+
+.sociaux-item i{
+    transition: color 0.3s ease;
+}
+
+.sociaux-item i:hover{
+    color: #777;
+}
+
+/* =========================
+    RESPONSIVITE
+   ========================= */
+
+/* --- ≤ 1200px (petits laptops) --- */
+@media (max-width: 1200px) {
+    .about-content { width: 80%; }
+    .specialties-grid { width: 85%; }
+    .reservation .reservation-item { width: 60%; }
+}
+
+/* --- ≤ 992px (tablettes paysage) --- */
+@media (max-width: 992px) {
+  /* Header */
+    .header { padding: 16px 24px; }
+    .menu { gap: 8px; flex-wrap: wrap; }
+    .menu a { margin: 6px 8px; }
+    .menu button { padding: 12px 16px; margin-left: 0; }
+
+  /* Hero */
+    .hero { height: 80vh; padding: 0 16px; }
+    .hero-content h2 { font-size: 64px; }
+    .hero-content p { font-size: 32px; letter-spacing: 2px; }
+    .hero-image { gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .hero-image img { width: 90px; height: 90px; }
+
+  /* About */
+    .about-content { width: 90%; gap: 16px; }
+    .about-content img { width: 160px; height: 320px; }
+    .statistics { flex-wrap: wrap; gap: 16px; }
+    .statistics .group { width: 30%; text-align: center; }
+    .group-text { width: 80%; text-align: center; }
+
+  /* Services */
+    .service .service-content { gap: 16px; }
+    .service-content .service-box { width: 30%; }
+
+  /* Specialties */
+    .specialties-grid { grid-template-columns: repeat(2, 1fr); width: 90%; }
+    .column-item img { height: 180px; }
+
+  /* Chef */
+    .chef .chef-grid { flex-wrap: wrap; }
+    .chef-grid .chef-item { width: 45%; }
+
+    /* Réservation */
+    .reservation { padding-left: 5%; height: auto; background-attachment: scroll; }
+    .reservation h2 { position: static; margin: 24px 0 8px; }
+    .reservation .title { position: static; margin-bottom: 16px; width: auto; }
+    .reservation .reservation-item { width: 70%; height: auto; padding: 32px 20px; }
+    .reservation .formulaire-reservation { margin: 24px 0; }
+
+    /* Testimony */
+    .testimony .testimony-grid { gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .testimony-grid .testimony-item { width: 45%; }
+    .testimony-item img { width: 140px; }
+    .testimony-item i { top: 100px; left: calc(50% + 30px); }
+
+    /* Recent */
+    .recent .recent-grid { gap: 16px; padding: 0 16px; }
+    .recent-grid .recent-item { width: 45%; }
+
+    /* Footer */
+    .footer { height: auto; padding: 40px 24px; }
+    .footer .footer-grid { flex-wrap: wrap; }
+    .footer-grid .footer-item { width: 45%; }
+    .footer-item .descrip { width: auto; }
+}
+
+/* --- ≤ 768px (tablettes portrait / grands mobiles) --- */
+@media (max-width: 768px) {
+  /* Header */
+    .header { position: relative; }
+    .header i { display: inline-flex; align-items: center; color:#fff; justify-content: center; }
+    .menu { display: none; }
+    /* Hero */
+    .hero { height: auto; padding: 40px 16px; }
+    .hero-content h2 { font-size: 56px; }
+    .hero-content p { font-size: 26px; }
+    .hero-image img { width: 80px; height: 80px; }
+
+    /* About */
+    .about-content { flex-direction: column; align-items: center; text-align: center; }
+    .about-content img { width: 70%; height: auto; }
+    .about-text { margin-top: 12px; }
+    .about-text .title { position: static; margin-top: 8px; }
+
+    .statistics { flex-direction: column; gap: 8px; }
+    .statistics .group, .group-text { width: 100%; }
+
+    /* Services */
+    .service .service-content { flex-direction: column; align-items: center; }
+    .service-content .service-box { width: 90%; max-width: 520px; }
+
+    /* Specialties */
+    .specialties .title { position: static; margin-top: -20px; }
+    .specialties-grid { grid-template-columns: 1fr; width: 95%; }
+    .column-item img { height: 200px; }
+
+    /* Chef */
+    .chef .title { position: static; margin-top: -20px; }
+    .chef .chef-grid { gap: 16px; }
+    .chef-grid .chef-item { width: 80%; max-width: 360px; }
+
+    /* Réservation */
+    .reservation .reservation-item { width: 90%; }
+    .reservation .formulaire-reservation { flex-direction: column; gap: 16px; }
+    .formulaire-reservation .bloc { width: 100%; }
+
+    /* Testimony */
+    .testimony .title { position: static; margin-top: -20px; }
+    .testimony-grid .testimony-item { width: 90%; }
+    .testimony-item img { width: 120px; }
+    .testimony-item i { top: 92px; left: calc(50% + 20px); }
+    .testimony-item .descrip { width: 90%; }
+
+    /* Recent */
+    .recent .title { position: static; margin-top: -20px; }
+    .recent-grid .recent-item { width: 90%; }
+
+    /* Footer */
+    .footer-grid .footer-item { width: 100%; }
+    .footer-item .image { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- ≤ 576px (mobiles) --- */
+@media (max-width: 576px) {
+  /* Header */
+    .menu { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px 12px; }
+    .menu button { width: 100%; }
+
+    /* Hero */
+    .hero-content h2 { font-size: 44px; }
+    .hero-content p { font-size: 20px; letter-spacing: 1px; }
+    .hero-image { gap: 10px; }
+    .hero-image img { width: 70px; height: 70px; }
+
+    /* About */
+        .about-content img { width: 100%; }
+
+    /* Specialties */
+    .column-info p { font-size: 15px; }
+    .column-info button { width: 100%; }
+
+    /* Chef */
+    .chef-item img { height: 220px; }
+
+    /* Réservation */
+    .reservation-item button { width: 100%; }
+
+    /* Testimony */
+    .testimony-item img { width: 100px; }
+    .testimony-item i { top: 80px; left: calc(50% + 12px); }
+
+    /* Recent */
+    .recent-item img { height: 180px; }
+    .recent-item .name { width: auto; }
+
+    /* Footer */
+    .footer { padding: 32px 16px; }
+    .footer-item .image { grid-template-columns: repeat(2, 1fr); }
 }
